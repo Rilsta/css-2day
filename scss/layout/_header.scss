@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+#nav-top-l {
+  li {
+    display: inline-block;
+  }
+}
+
+#nav-top-r {
+  li {
+    display: inline-block;
+  }
+}
+
+#logo{
+  @include font($size: 2em);
+}
+
+#nav-main {
+  li {
+    display: inline-block;
+  }
+}
