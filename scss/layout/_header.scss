@@ -2,25 +2,23 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
-header{
-  background-color: $header-main-color;
-  position: relative;
-  h1 {
-    @include position(absolute, $top:0, $right: 1%);
-  }
-}
-
 .nav-top {
   padding: 10px;
-  text-align: left;
-  li {
-    display: inline-block;
-    &:nth-child(2) {
-      display: none;
-    }
+  overflow: show;
+  position: relative;
+  background-color: $header-main-color;
+  .logo{
+    @include font($color: white, $size: 1em);
+    @include position(absolute, $top: 20px, $right: 50%);
+    transform: translate(50%, 0);
   }
-  i {
+  .fa.fa-bars {
     @include button();
+    float: left;
+  }
+  .fa.fa-search {
+    @include button();
+    float: right;
   }
   span {
     display:none;
@@ -37,7 +35,7 @@ header{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
-    z-index: 1;
+    z-index: 10;
     p {
       font-size: 0.7em;
       font-family: sans-serif;
@@ -51,48 +49,44 @@ header{
   }
 }
 
-
-.logo{
-  text-align: right;
-  @include font($color: white, $size: 2em);
-  span {
-    color: $logo-the-color;
-  }
-}
-
-.nav-main {
-  padding: 10px;
-  text-align: right;
-  i {
-    @include button();
-  }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    .dropdown-content  {
+.nav-mid {
+  position: relative;
+  background-image: url("http://static1.squarespace.com/static/516fce0be4b03f8eb28099a0/t/566ce8dd7086d7e2aacb3dd7/1449978085718/designani_Illus-01.png?format=500w");
+  @include size(100%, 100px);
+  .nav-mid-img {
+    background-color: rgba(0, 0, 0, 0.75);
+    @include size(100%, 100px);
+    }
+    h2 {
+      @include position(absolute, $top:25px, $right: 50% );
+      @include font($color: white, $weight: lighter );
+      transform: translate(50%, 0);
+      text-align: center;
+    }
+    button {
       display: none;
-      position: absolute;
-      right: 5px;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      padding: 12px 16px;
-      z-index: 1;
-      p {
-        font-size: 0.7em;
-        font-family: sans-serif;
-      }
-      a {
-        padding-right: 0.3em;
-      }
-    }
-    &:hover .dropdown-content {
-      display: block;
+    //   @include position(absolute, $top:100px, $right: 50%);
+    //   transform: translate(50%, 0);
     }
   }
-  li {
-    padding: 5px;
-    letter-spacing: 1px;
-    display: inline-block;
+
+  .nav-bottom {
+    @include size(100%, 55px);
+    background-color: white;
+    box-shadow: 0 0 0.5em $mid-grey;
+    ul{
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+    }
+    li a{
+      @include font($size: 0.55em, $color: $mid-grey);
+      text-transform: uppercase;
+      padding-right: 15px;
+      vertical-align: middle;
+    }
   }
-}

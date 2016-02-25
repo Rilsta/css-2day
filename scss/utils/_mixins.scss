@@ -1,9 +1,17 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
+
+//Width and Height
+@mixin size($width, $height:auto){
+  width: $width;
+  height: $height;
+}
+
+
 // font mixin
 
-@mixin font($family: "Georgia, serif", $color: black, $size: 1em, $weight: normal) {
+@mixin font($family: $text-font-stack, $color: black, $size: 1em, $weight: normal) {
   font-family: $family;
   color: $color;
   font-size: $size;
@@ -11,14 +19,9 @@
 }
 
 // round buttons for nav and footer
-@mixin button($pad:10px, $width:50px, $height:50px, $size:145%, $br:50%, $align:center, $border:1px solid white, $color: white) {
+@mixin button($pad:10px, $size:100%, $color: white) {
   padding:$pad;
   font-size: $size;
-  width: $width;
-  height: $height;
-  text-align: $align;
-  border: $border;
-  border-radius: $br;
   color: $color;
 }
 

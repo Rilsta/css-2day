@@ -8,7 +8,7 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Georgia', sans-serif !default;
+$text-font-stack: 'Helvetica Neue', "Helvetica", sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
@@ -38,10 +38,15 @@ $mid-grey: rgb(153, 153, 153) !default;
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
-/// Header Purple
-$header-main-color: #BBADFD;
-/// Logo Pink 'the' color
-$logo-the-color: #FDADE7;
+/// Header black
+$header-main-color: #0c0c0c;
+
+/// Logo White
+$logo-the-color: #f4f4f4;
+
+
+//background
+$background-color: #DFDFDF;
 
 
 
