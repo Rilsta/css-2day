@@ -2,24 +2,97 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
-#nav-top-l {
-  li {
-    display: inline-block;
+header{
+  background-color: $header-main-color;
+  position: relative;
+  h1 {
+    @include position(absolute, $top:0, $right: 1%);
   }
 }
 
-#nav-top-r {
+.nav-top {
+  padding: 10px;
+  text-align: left;
   li {
     display: inline-block;
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+  i {
+    @include button();
+  }
+  span {
+    display:none;
   }
 }
 
-#logo{
-  @include font($size: 2em);
+.dropdown {
+  position: relative;
+  display: inline-block;
+  .dropdown-content  {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    p {
+      font-size: 0.7em;
+      font-family: sans-serif;
+    }
+    a {
+      padding-right: 0.3em;
+    }
+  }
+  &:hover .dropdown-content {
+    display: block;
+  }
 }
 
-#nav-main {
+
+.logo{
+  text-align: right;
+  @include font($color: white, $size: 2em);
+  span {
+    color: $logo-the-color;
+  }
+}
+
+.nav-main {
+  padding: 10px;
+  text-align: right;
+  i {
+    @include button();
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    .dropdown-content  {
+      display: none;
+      position: absolute;
+      right: 5px;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      z-index: 1;
+      p {
+        font-size: 0.7em;
+        font-family: sans-serif;
+      }
+      a {
+        padding-right: 0.3em;
+      }
+    }
+    &:hover .dropdown-content {
+      display: block;
+    }
+  }
   li {
+    padding: 5px;
+    letter-spacing: 1px;
     display: inline-block;
   }
 }
