@@ -44,10 +44,32 @@ $header-main-color: #0c0c0c;
 /// Logo White
 $logo-the-color: #f4f4f4;
 
+//link color
 
-//background
+$artist--link-color: #369;
+
+//border
+
+$artist--borders: 1px solid $light-grey;
+
+//background colors
 $background-color: #DFDFDF;
+$background-color--artist: #fff;
 
+// Section spacing
+$content--margin: 15px;
+$artist--margin: 0 0 15px 0;
+
+$artist--padding: 15px 0 0 0;
+$artist--img-padding: 0 15px 0 0;
+$artist--icon-padding: 0 10px 60px 0;
+$artist--tags: 8px 5px;
+
+
+//Font Sizing
+
+$artist--info-size: 0.75em;
+$artist--tags-size: 0.6em;
 
 
 /// Container's maximum width
@@ -63,7 +85,7 @@ $max-width: 1180px !default;
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 /// @see {mixin} respond-to
 $breakpoints: (
-  'small': 320px,
+  'small': 500px,
   'medium': 768px,
   'large': 1024px,
 ) !default;

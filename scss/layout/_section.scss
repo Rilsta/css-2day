@@ -2,51 +2,102 @@
 // This file contains all styles related to the sections of the site/application.
 // -----------------------------------------------------------------------------
 .content {
-  margin: 15px;
+  margin: $content--margin;
 }
 .artist {
-  max-width: 100%;
-  max-height: 448px;
-  border: 1px solid $light-grey;
-  padding-top: 15px;
+  margin: $artist--margin;
+  border: $artist--borders;
+  padding: $artist--padding;
+  background-color: $background-color--artist;
   overflow: auto;
-  background-color: white;
   img {
     float:left;
-    padding-right: 10px;
-    position: static;
+    padding: $artist--img-padding;
   }
-  .artistInfo{
-    font-size: .75em;
-    // border: 1px solid purple;
-    h3 {
-      font-weight: bold;
+  @include media(map-get($breakpoints, 'small')) {
+    @include row();
+    @include span-columns(2);
+    // @include size(50%);
+    padding: 0;
+    width: 205px;
+    height: 285px;
+    border-radius: 5px;
+    img{
+      width: 100%;
+      height: auto;
+      float: none;
+      padding: 0;
     }
-    a{
-      color: #369;
-      &:hover {
-        text-decoration: underline;
+    .icon{
+      display: none;
+    }
+    .artistInfo h3{
+      font-size: 0.8em;
+      padding: 0 0 25px 10px;
+    }
+    .artistInfo h4{
+      font-size: 0.8em;
+      margin: 0 10px 0 10px;
+      border-bottom: $artist--borders;;
+      }
+    .tags{
+      border: 0;
+      padding: 0;
+
+      .likes{
+        background-color: #cc9;
+        border: none;
+        padding: 0;
+        display: block;
+
+        // top: 38px;
+        // left: 10px;
+      }
+      .tag-lines{
+        display: block;
+        padding-left: 10px;
+        border-bottom: $artist--borders;;
       }
     }
   }
-  .icon{
-    text-align: right;
-    padding-bottom: 60px;
-    padding-right: 10px;
-    color: $mid-grey;
+
+
   }
-  .tags{
-    border-top: 1px solid $light-grey;
-    font-size: 0.6em;
-      color: $mid-grey;
-    .likes{
-      display: inline-block;
-      border-right: 1px solid $light-grey;
-      padding: 8px 5px;
+
+.artistInfo{
+  font-size: $artist--info-size;
+  // border: 1px solid purple;
+  h3 {
+    font-weight: bold;
+  }
+  a{
+    color: $artist--link-color;
+    &:hover {
+      text-decoration: underline;
     }
-    .tag-lines{
-      padding: 8px 5px;
-      display: inline-block;
-    }
+  }
+}
+
+.icon{
+  text-align: right;
+  padding: $artist--icon-padding;
+  color: $mid-grey;
+}
+// .icon2{
+//   display: none;
+// }
+.tags{
+  border-top: $artist--borders;
+  font-size: $artist--tags-size;
+    color: $mid-grey;
+  .likes{
+    display: inline-block;
+    border-right: $artist--borders;
+    padding: $artist--tags;
+  }
+  .tag-lines{
+    float:right;
+    padding: $artist--tags;
+    display: inline-block;
   }
 }
